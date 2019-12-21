@@ -2,7 +2,6 @@ package com.github.lishulongVI.algorithm;
 
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class RepeatElementExit {
 
@@ -15,6 +14,9 @@ public class RepeatElementExit {
         // 0，1，2，3
         for (int k = 0; k < integers.length; k++) {
             int a = integers[k];
+            if (a > integers.length){
+                return false;
+            }
             int b = integers[a - 1];
             System.out.println(Arrays.toString(integers));
             // 对应的数值数值不一样，且下标不一样进行交换
